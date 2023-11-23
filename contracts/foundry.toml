@@ -6,7 +6,6 @@ libs = ["lib"]
 # See more config options https://github.com/foundry-rs/foundry/tree/master/config
 remappings = [
     "@openzeppelin-contracts/=lib/openzeppelin-contracts/contracts/",
-    "@chainlink/=lib/chainlink-brownie-contracts/contracts",
 ]
 
 [rpc_endpoints]
