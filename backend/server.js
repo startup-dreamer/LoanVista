@@ -2,6 +2,7 @@
  * This module sets up an Express server and connects to a database.
  * It defines routes for various endpoints and starts the server on a specified port.
  */
+
 const express = require("express")
 const cors = require("cors")
 
