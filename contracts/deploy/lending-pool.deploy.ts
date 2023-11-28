@@ -17,3 +17,5 @@ main()
         console.error(error);
         process.exit(1);
     });
+
+// LendingPool deployed to: 0x9EDdd92cF5b7ff87eaf8ac9483DFF5BEbF69211d

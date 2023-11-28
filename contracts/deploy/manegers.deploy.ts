@@ -30,3 +30,7 @@ main()
         console.error(error);
         process.exit(1);
     });
+
+// LoanManager deployed to: 0x43777c2Be846592E607dDb1D4fF37f9e3d696764
+// OfferManager deployed to: 0x618D96e5E9FFa25B27015c12CD08AeD1a349785c
+// FeeManager deployed to: 0x9e2dCF8a2FB63a243714F09A086D11Ede9EfEF05
