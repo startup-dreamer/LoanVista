@@ -4,11 +4,11 @@ pragma solidity ^0.8.19;
 import "./libraries/ActivityLibrary.sol";
 
 import "./interfaces/IActivity.sol";
-import "./interfaces/IDarshScore.sol";
+import "./interfaces/ILoanVistaScore.sol";
 
 import "@openzeppelin/contracts/access/Ownable2Step.sol";
 
-contract DarshScore is Ownable2Step, IDarshScore {
+contract LoanVistaScore is Ownable2Step, ILoanVistaScore {
     IActivity private _activity;
 
     constructor() Ownable2Step() {}

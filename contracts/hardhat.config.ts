@@ -25,9 +25,15 @@ const config: HardhatUserConfig = {
     settings: {
       optimizer: {
         enabled: true,
-        runs: 200,
+        runs: 200
       },
-    },
+      outputSelection: {
+        "*": {
+          "*": ["evm.bytecode.object"]
+        }
+      },
+      viaIR: true, // Add this line
+    }
   },
   networks: {
     hardhat: {
@@ -40,6 +46,10 @@ const config: HardhatUserConfig = {
       accounts: {
         count: 50,
       },
+    },
+    baobab: {
+      url: 'https://public-en-baobab.klaytn.net',
+      accounts: ['0xc07c49c7a4f9124d663dd8880122ae7906369551178431c1e087038151f7ab90'],
     },
     sepolia: {
       url: `https://sepolia.infura.io/v3/${

@@ -1,13 +1,13 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.19;
 
-import "./interfaces/IDarshScore.sol";
+import "./interfaces/ILoanVistaScore.sol";
 import "./interfaces/ILoanToValueRatio.sol";
 
 import "@openzeppelin/contracts/access/Ownable2Step.sol";
 
 contract LoanToValueRatio is Ownable2Step, ILoanToValueRatio {
-    IDarshScore private _darshScore;
+    ILoanVistaScore private _loanVistaScore;
     uint8 public constant base = 10;
 
     uint160 minLTV = 1000;
@@ -41,7 +41,7 @@ contract LoanToValueRatio is Ownable2Step, ILoanToValueRatio {
     }
 
     function getLTV(address user) public view override returns (uint160) {
-        uint16 score = _darshScore.getScore(user);
+        uint16 score = _loanVistaScore.getScore(user);
         uint160 range = maxLTV - minLTV;
         uint160 scale = ((range * score) / 100);
         return minLTV + scale;
@@ -56,6 +56,6 @@ contract LoanToValueRatio is Ownable2Step, ILoanToValueRatio {
         minLTV = minLTV_ * base;
         maxLTV = maxLTV_ * base;
 
-        _darshScore = IDarshScore(trustScore_);
+        _loanVistaScore = ILoanVistaScore(trustScore_);
     }
 }
