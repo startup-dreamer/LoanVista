@@ -6,10 +6,11 @@ import "./libraries/Errors.sol";
 import "./interfaces/IPriceFeed.sol";
 
 import "@openzeppelin/contracts/access/Ownable2Step.sol";
-import "@chainlink/contracts/src/v0.8/interfaces/AggregatorV3Interface.sol";
+import "witnet-solidity-bridge/contracts/interfaces/IWitnetPriceRouter.sol";
 
 contract PriceFeed is Ownable2Step, IPriceFeed {
     mapping(address => address) feedAddresses;
+    IWitnetPriceRouter public immutable witnetPriceRouter;
 
     address private USD;
 
@@ -19,7 +20,14 @@ contract PriceFeed is Ownable2Step, IPriceFeed {
         address indexed priceFeed
     );
 
-    constructor() Ownable2Step() {}
+    /*
+     * Network: Klaytn Baobab
+     * WitnetPriceRouter: 0xeD074DA2A76FD2Ca90C1508930b4FB4420e413B0
+     **/
+    constructor() Ownable2Step() {
+        witnetPriceRouter = IWitnetPriceRouter(0xeD074DA2A76FD2Ca90C1508930b4FB4420e413B0);
+
+    }
 
     function addUSDFeed(address usd_) external onlyOwner {
         USD = usd_;

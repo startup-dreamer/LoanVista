@@ -1,12 +1,12 @@
 {
-  "name": "darsh-protocol-api",
+  "name": "loan-vista-backend",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Arogundade Ibrahim",
+  "author": "Krieger",
   "license": "ISC",
   "dependencies": {
     "cors": "^2.8.5",

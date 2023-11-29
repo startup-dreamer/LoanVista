@@ -1,5 +1,5 @@
 {
-  "name": "Aurum-Protocol-Contracts",
+  "name": "loan-vista-contracts",
   "version": "1.0.0",
   "description": "The harmony between Foundry and Hardhat.",
   "directories": {
@@ -33,6 +33,7 @@
   "dependencies": {
     "@chainlink/hardhat-chainlink": "^0.0.2",
     "@openzeppelin/contracts": "^4.9.3",
-    "dotenv": "^16.3.1"
+    "dotenv": "^16.3.1",
+    "witnet-solidity-bridge": "^0.6.1"
   }
 }
