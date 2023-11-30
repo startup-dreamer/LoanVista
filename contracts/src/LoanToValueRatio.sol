@@ -13,8 +13,8 @@ contract LoanToValueRatio is Ownable2Step, ILoanToValueRatio {
     uint160 minLTV = 1000;
     uint160 maxLTV = 1200;
 
-    uint256 public darshScorePrice0 = 1000 * 1e18;
-    uint256 public darshScorePrice1 = 3000 * 1e18;
+    uint256 public loanvistaPrice0 = 1000 * 1e18;
+    uint256 public loanvistaPrice1 = 3000 * 1e18;
 
     constructor() Ownable2Step() {}
 
@@ -30,9 +30,9 @@ contract LoanToValueRatio is Ownable2Step, ILoanToValueRatio {
     {
         uint160 ltvRatio = getLTV(user);
 
-        if (amount > darshScorePrice1) return maxLTV;
+        if (amount > loanvistaPrice1) return maxLTV;
 
-        if (amount > darshScorePrice0) {
+        if (amount > loanvistaPrice0) {
             uint160 average = ((maxLTV + minLTV) / 2);
             if (ltvRatio <= average) return average;
         }
@@ -47,7 +47,7 @@ contract LoanToValueRatio is Ownable2Step, ILoanToValueRatio {
         return minLTV + scale;
     }
 
-    function setDarshScore(
+    function setLoanVistaScore(
         address trustScore_,
         uint160 minLTV_,
         uint160 maxLTV_

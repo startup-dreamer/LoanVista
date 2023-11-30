@@ -128,7 +128,7 @@ Loan Vista redefines peer-to-peer lending, allowing users to personalize loans b
 
 ## Future Work
 
-**NFT Recipt:** e plan to integrate a dynamic NFT receipt into the protocol, unlocking opportunities in the secondary market, such as derivatives and structured products. This will enhance the Klaytn Ecosystem. The contract is completed but not yet deployed or integrated; find it in the `contracts/src/archive` directory.
+**NFT Recipt:** we plan to integrate a dynamic NFT receipt into the protocol, unlocking opportunities in the secondary market, such as derivatives and structured products. This will enhance the Klaytn Ecosystem. The contract is completed but not yet deployed or integrated; find it in the `contracts/src/archive` directory.
 
 
 **NFTs as Collateral:**

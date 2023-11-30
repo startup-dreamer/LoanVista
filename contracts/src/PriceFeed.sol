@@ -6,6 +6,7 @@ import "./libraries/Errors.sol";
 import "./interfaces/IPriceFeed.sol";
 
 import "@openzeppelin/contracts/access/Ownable2Step.sol";
+
 import "witnet-solidity-bridge/contracts/interfaces/IWitnetPriceRouter.sol";
 
 contract PriceFeed is Ownable2Step, IPriceFeed {
@@ -29,24 +30,6 @@ contract PriceFeed is Ownable2Step, IPriceFeed {
 
     }
 
-    function addUSDFeed(address usd_) external onlyOwner {
-        USD = usd_;
-        feedAddresses[usd_] = usd_;
-    }
-
-    /// @dev function for owner to add more price feeds
-    function addPriceFeed(address _tokenAddress, address _chainlinkPriceFeed)
-        external
-        onlyOwner
-    {
-        feedAddresses[_tokenAddress] = _chainlinkPriceFeed;
-        emit PriceFeedAdded(
-            block.timestamp,
-            _tokenAddress,
-            _chainlinkPriceFeed
-        );
-    }
-
     /* Returns the latest price */
     function getLatestPriceUSD(address _tokenAddress)
         public
@@ -59,11 +42,19 @@ contract PriceFeed is Ownable2Step, IPriceFeed {
             "ERR_TOKEN_ADDRESS"
         );
 
-        AggregatorV3Interface priceFeed = AggregatorV3Interface(
-            feedAddresses[_tokenAddress]
-        );
+        bytes4 input;
 
-        (, int256 answer, , , uint80 decimal) = priceFeed.latestRoundData();
+        // So far only KSP and KLAY are supported
+        if(_tokenAddress == 0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee) {
+            input = 0x6cc828d1;
+        }
+        else if (_tokenAddress == 0xc6a2ad8cc6e4a7e08fc37cc5954be07d499e7654) {
+            input = 0xa45ce226;
+        }
+
+
+        (uint256 answer, ,decimal) = witnetPriceRouter.valueFor(input);
+
         require(answer > 0, "ERR_ZERO_ANSWER");
 
         return (uint256(answer), uint8(decimal));
