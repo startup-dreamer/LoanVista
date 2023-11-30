@@ -45,8 +45,8 @@ const router = createRouter({
   },
   routes: [
     {
-      path: '/discover',
-      name: 'discover',
+      path: '/',
+      name: 'home',
       component: AppView,
       children: [
         {

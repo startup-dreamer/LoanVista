@@ -12,13 +12,13 @@ const Profile = {
     },
     shortName: function (address, pad) {
         if (address.toLowerCase() == "0x1a4d347fbdf09e2019b9a75d23d4be4ce74421ec".toLowerCase()) {
-            return 'Alice.ftm'
+            return 'Alice.klay'
         }
         if (address.toLowerCase() == "0x25213fcda4eb079927cac2bcd5c513068b94babd".toLowerCase()) {
-            return 'Bob.ftm'
+            return 'Bob.klay'
         }
         let name = address.replace(/[^a-zA-Z]/gm,"")
-        return '0x' + name.substring(1, pad)  + '.ftm'
+        return '0x' + name.substring(1, pad)  + '.klay'
     },
 }
 

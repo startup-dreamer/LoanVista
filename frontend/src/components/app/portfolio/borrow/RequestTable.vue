@@ -91,7 +91,7 @@
 <script setup>
 import IconOut from '../../../icons/IconOut.vue';
 import IconSort from '../../../icons/IconSort.vue';
-</script >
+</script>
 
 <script>
 import Authentication from '../../../../scripts/Authentication';
