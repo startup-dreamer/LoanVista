@@ -95,7 +95,7 @@ Loan Vista redefines peer-to-peer lending, allowing users to personalize loans b
 
 ### Other Spec
 
-- [React][react-url]
+- [Vuejs](https://vuejs.org/)
 - [Hardhat](https://hardhat.org/)
 - [Foundry](https://book.getfoundry.sh/)
 - [Express](https://expressjs.com/)

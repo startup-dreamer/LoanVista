@@ -5,7 +5,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/startup-dreamer/LoanVista/blob/master/README.md">
-    <img src="../assets/Loan-Vista-Zoom-removebg-preview.ico" alt="Logo" width="100" height="100">
+    <img src="./assets/Loan-Vista-Zoom-removebg-preview.ico" alt="Logo" width="100" height="100">
   </a>
 
   <h3 align="center">Loan-Vista</h3>
@@ -48,7 +48,7 @@ Loan Vista redefines peer-to-peer lending, allowing users to personalize loans b
 
 ## User Flow:
 
-![Protocol-Flow](../assets/schema.png)
+![Protocol-Flow](./assets/schema.png)
 
 ### For Lenders:
 
@@ -95,7 +95,7 @@ Loan Vista redefines peer-to-peer lending, allowing users to personalize loans b
 
 ### Other Spec
 
-- [React][react-url]
+- [Vuejs](https://vuejs.org/)
 - [Hardhat](https://hardhat.org/)
 - [Foundry](https://book.getfoundry.sh/)
 - [Express](https://expressjs.com/)
@@ -109,20 +109,20 @@ Loan Vista redefines peer-to-peer lending, allowing users to personalize loans b
 
 ### NFT
 
-![NFT](../assets/recipt.png)
+![NFT](./assets/recipt.png)
 
 
 ### Portfolio
 
-![Protfolio](../assets/porfolio.png)
+![Protfolio](./assets/porfolio.png)
 
 ### Lending/Borrowing Market
 
-![Lending](../assets/lander.png)
+![Lending](./assets/lander.png)
 
 ### Create Offer
 
-![Offer](../assets/createoffer.png)
+![Offer](./assets/createoffer.png)
 
 </div>
 
