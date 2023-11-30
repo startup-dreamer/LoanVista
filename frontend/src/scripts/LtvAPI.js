@@ -18,7 +18,7 @@ const LtvAPI = {
         const LoanToValue = contract(LoanToValueABI)
         const PriceFeed = contract(PriceFeedABI)
 
-        const web3 = new Web3('https://fantom-testnet.public.blastapi.io');
+        const web3 = new Web3('https://public-en-baobab.klaytn.net');
 
         LoanToValue.setProvider(web3.currentProvider)
         PriceFeed.setProvider(web3.currentProvider)
@@ -52,7 +52,7 @@ const LtvAPI = {
             
             let ltv = await instance.ltv.getRelativeLTV(
                 userAddress, 
-                convert(principalPriceInUSD, 'wei', 'wei')
+                convert(principalPriceInUSD, 'peb', 'peb')
             );
 
             let collateralNormalAmount = await instance.priceFeed.exchangeRate(

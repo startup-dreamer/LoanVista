@@ -147,7 +147,7 @@ export default {
             if (this.userAddress == null) {
                 return;
             }
-            this.axios.get(`https://darshprotocol.onrender.com/loans/vault?address=${this.userAddress.toLowerCase()}`).then(response => {
+            this.axios.get(`https://loanvista.onrender.com/loans/vault?address=${this.userAddress.toLowerCase()}`).then(response => {
                 this.loans = response.data;
                 this.fetching = false;
             }).catch(error => {

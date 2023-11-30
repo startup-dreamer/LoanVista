@@ -108,7 +108,7 @@ export default {
                     description: 'Borrow request was successfully accepted.',
                     type: 'success',
                     linkTitle: 'View Trx',
-                    linkUrl: `https://testnet.ftmscan.com/tx/${trx.tx}`
+                    linkUrl: `https://baobab.klaytnscope.com/tx/${trx.tx}`
                 })
             } else {
                 messages.insertMessage({
@@ -136,7 +136,7 @@ export default {
                     description: 'Borrow request was successfully rejected.',
                     type: 'success',
                     linkTitle: 'View Trx',
-                    linkUrl: `https://testnet.ftmscan.com/tx/${trx.tx}`
+                    linkUrl: `https://baobab.klaytnscope.com/tx/${trx.tx}`
                 })
                 this.$emit('done')
             } else {

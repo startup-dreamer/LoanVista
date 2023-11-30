@@ -126,7 +126,7 @@ export default {
             if (this.userAddress == null) {
                 return;
             }
-            this.axios.get(`https://darshprotocol.onrender.com/offers?offerType=0&creator=${this.userAddress.toLowerCase()}`).then(response => {
+            this.axios.get(`https://loanvista.onrender.com/offers?offerType=0&creator=${this.userAddress.toLowerCase()}`).then(response => {
                 this.offers = response.data;
                 this.fetching = false;
             }).catch(error => {

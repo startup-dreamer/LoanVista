@@ -109,7 +109,7 @@ export default {
         },
         fetchLendingOffers: function () {
             this.fetching = true
-            this.axios.get('https://darshprotocol.onrender.com/offers?offerType=1').then(response => {
+            this.axios.get('https://loanvista.onrender.com/offers?offerType=1').then(response => {
                 const offers = response.data
                 const now = (Date.now() / 1000).toFixed(0)
 

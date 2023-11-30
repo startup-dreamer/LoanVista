@@ -9,7 +9,7 @@ const LtvAPI = {
         if (this.instance != null) return this.instance
 
         const DarshScore = contract(DarshScoreABI)
-        const web3 = new Web3('https://fantom-testnet.public.blastapi.io');
+        const web3 = new Web3('https://public-en-baobab.klaytn.net');
         DarshScore.setProvider(web3.currentProvider)
 
         try {

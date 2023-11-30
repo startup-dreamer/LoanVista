@@ -1,28 +1,4 @@
-<!-- Improved compatibility of back to top link: See: https://github.com/othneildrew/Best-README-Template/pull/73 -->
 <a name="readme-top"></a>
-<!--
-*** Thanks for checking out the Best-README-Template. If you have a suggestion
-*** that would make this better, please fork the repo and create a pull request
-*** or simply open an issue with the tag "enhancement".
-*** Don't forget to give the project a star!
-*** Thanks again! Now go create something AMAZING! :D
--->
-
-<!-- PROJECT SHIELDS -->
-<!--
-*** I'm using markdown "reference style" links for readability.
-*** Reference links are enclosed in brackets [ ] instead of parentheses ( ).
-*** See the bottom of this document for the declaration of the reference variables
-*** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
-*** https://www.markdownguide.org/basic-syntax/#reference-style-links
--->
-<!-- [![Contributors][contributors-shield]][contributors-url]
-[![Forks][forks-shield]][forks-url]
-[![Stargazers][stars-shield]][stars-url]
-[![Issues][issues-shield]][issues-url]
-[![MIT License][license-shield]][license-url]
-[![LinkedIn][linkedin-shield]][linkedin-url] -->
-
 
 
 <!-- PROJECT LOGO -->
@@ -57,8 +33,9 @@ Empower Your Financial Horizon with Loan Vista: Redefining Peer-to-Peer Lending!
 - [Built With](#built-with)
 - [Screenshots](#demo-screenshots)
 - [Future Work](#future-work)
-- [Getting Started](#getting-started)
+- [Challenges](#challenges-we-ran-into)
 - [Contributing](#contributing)
+- [Getting Started](#getting-started)
 - [Contact](#contact)
 - [Acknowledgments](#acknowledgments)
 
@@ -151,12 +128,18 @@ Loan Vista redefines peer-to-peer lending, allowing users to personalize loans b
 
 ## Future Work
 
-**NFT Recipt:** We are currently working on integrating a dynamic NFT as a receipt/proof of loan/agreement. We will soon integrate it into the protocol, which is already completed and located in the `contracts/src/archive` directory.
+**NFT Recipt:** e plan to integrate a dynamic NFT receipt into the protocol, unlocking opportunities in the secondary market, such as derivatives and structured products. This will enhance the Klaytn Ecosystem. The contract is completed but not yet deployed or integrated; find it in the `contracts/src/archive` directory.
 
 
 **NFTs as Collateral:**
 We plan to integrate P2P NFT Collateralized loans into Loan-Vista. This addition will enhance the usability and capital efficiency of the protocol, benefiting the entire DeFi ecosystem.
 
+
+## Challenges we ran into
+
+- Creating such a big project with so many technicalities was difficult as we are committed to deploy it to Klaytn's mainnet and see this work (but currently the contracts are deployed to testnet only).
+
+- We first planned to add the NFT receipt to the protocol, but due to time constraints, we were not able to do so. However, as soon as the judging is over, we are planning to integrate it into the protocol.
 
 <!-- CONTRIBUTING -->
 ## Contributing

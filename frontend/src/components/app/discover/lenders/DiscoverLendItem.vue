@@ -235,7 +235,7 @@ export default {
             this.fetching = fetching;
             let id = this.$route.params.id;
             try {
-                let response = await this.axios.get(`https://darshprotocol.onrender.com/offers/${id}`);
+                let response = await this.axios.get(`https://loanvista.onrender.com/offers/${id}`);
                 this.offer = response.data;
                 if (this.userAddress) {
                     if (this.offer.creator != this.userAddress) {

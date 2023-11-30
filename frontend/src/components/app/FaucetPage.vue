@@ -67,7 +67,7 @@ export default {
                     description: 'Faucet token was successfully minted.',
                     type: 'success',
                     linkTitle: 'View Trx',
-                    linkUrl: `https://testnet.ftmscan.com/tx/${trx.transactionHash}`
+                    linkUrl: `https://baobab.klaytnscope.com/tx/${trx.tx}`
                 })
             } else {
                 messages.insertMessage({

@@ -48,7 +48,7 @@ const Authentication = {
         try {
             await window.ethereum.request({
                 method: 'wallet_switchEthereumChain',
-                params: [{ chainId: '0xfa2' }],
+                params: [{ chainId: '0x3e9' }],
             });
         } catch (error) {
             if (error.code === 4902) {
@@ -56,15 +56,15 @@ const Authentication = {
                     await window.ethereum.request({
                         method: 'wallet_addEthereumChain',
                         params: [{
-                            chainId: '0xfa2',
-                            chainName: 'Fantom Opera Testnet',
+                            chainId: '0x3e9',
+                            chainName: 'Klaytn Baobab Testnet',
                             nativeCurrency: {
-                                name: 'Fantom',
-                                symbol: 'FTM',
+                                name: 'Klaytn',
+                                symbol: 'KLAY',
                                 decimals: 18
                             },
-                            blockExplorerUrls: ['https://testnet.ftmscan.com'],
-                            rpcUrls: ['https://fantom-testnet.public.blastapi.io'],
+                            blockExplorerUrls: ['https://baobab.klaytnscope.com/'],
+                            rpcUrls: ['https://public-en-baobab.klaytn.net'],
                         },],
                     });
                 } catch (addError) {

@@ -100,7 +100,7 @@ export default {
                     description: 'Loan principal was successfully claimed.',
                     type: 'success',
                     linkTitle: 'View Trx',
-                    linkUrl: `https://testnet.ftmscan.com/tx/${trx.tx}`
+                    linkUrl: `https://baobab.klaytnscope.com/tx/${trx.tx}`
                 })
                 this.$emit('close')
             } else {

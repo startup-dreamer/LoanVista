@@ -1,14 +1,13 @@
 /* eslint-disable no-undef */
 import Web3 from "web3"
-import ERC20 from '../contracts/ERC20.json'
+import KIP7 from '../contracts/KIP7.json'
 
 const nativeAddress = '0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee'
 
 const Approval = {
     approve: async function (userAddress, amount, tokenAddress, spender) {
-        // const web3 = new Web3('https://fantom-testnet.public.blastapi.io');
         const web3 = new Web3(ethereum);
-        const contract = new web3.eth.Contract(ERC20.abi, tokenAddress)
+        const contract = new web3.eth.Contract(KIP7.abi, tokenAddress)
 
         if (tokenAddress == nativeAddress) return
 
@@ -21,8 +20,8 @@ const Approval = {
         }
     },
     getAllocationOf: async function (userAddress, tokenAddress, spender) {
-        const web3 = new Web3('https://fantom-testnet.public.blastapi.io');
-        const contract = new web3.eth.Contract(ERC20.abi, tokenAddress)
+        const web3 = new Web3('https://public-en-baobab.klaytn.net');
+        const contract = new web3.eth.Contract(KIP7.abi, tokenAddress)
 
         if (tokenAddress.toLowerCase() == nativeAddress.toLowerCase()) return '100000000000000000000000000000000000000000'
 
@@ -38,12 +37,12 @@ const Approval = {
             await ethereum.request({
                 method: 'wallet_watchAsset',
                 params: {
-                    type: 'ERC20',
+                    type: 'KIP7',
                     options: {
                         address: asset.address,
                         symbol: asset.symbol,
                         decimals: '18',
-                        image: 'https://darshprotocol.netlify.app/images/' + asset.image + '.png',
+                        image: 'https://loanvista.netlify.app/images/' + asset.image + '.png',
                     },
                 },
             });
@@ -56,7 +55,7 @@ const Approval = {
     faucetMint: async function (asset, userAddress) {
         try {
             const web3 = new Web3(ethereum)
-            const contract = new web3.eth.Contract(ERC20.abi, asset.address)
+            const contract = new web3.eth.Contract(KIP7.abi, asset.address)
 
             const trx = await contract.methods.faucetMint(asset.faucetAmount).send({ from: userAddress })
             return trx

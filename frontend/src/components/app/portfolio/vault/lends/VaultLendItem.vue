@@ -215,7 +215,7 @@ export default {
             if (this.userAddress == null) {
                 return;
             }
-            this.axios.get(`https://darshprotocol.onrender.com/offers/${id}?creator=${this.userAddress.toLowerCase()}`).then(response => {
+            this.axios.get(`https://loanvista.onrender.com/offers/${id}?creator=${this.userAddress.toLowerCase()}`).then(response => {
                 this.offer = response.data;
                 this.getDaysAgo(this.offer.createdAt);
                 this.fetching = false;
@@ -253,7 +253,7 @@ export default {
                     description: "Collateral was successfully claimed.",
                     type: "success",
                     linkTitle: "View Trx",
-                    linkUrl: `https://testnet.ftmscan.com/tx/${trx.tx}`
+                    linkUrl: `https://baobab.klaytnscope.com/tx/${trx.tx}`
                 });
             }
             else {

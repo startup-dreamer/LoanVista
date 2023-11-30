@@ -215,7 +215,7 @@ export default {
         },
         getLoans: function () {
             if (!this.userAddress) return
-            this.axios.get(`https://darshprotocol.onrender.com/loans/vault?address=${this.userAddress.toLowerCase()}`).then(response => {
+            this.axios.get(`https://loanvista.onrender.com/loans/vault?address=${this.userAddress.toLowerCase()}`).then(response => {
                 this.loans = response.data;
 
                 for (let index = 0; index < this.loans.length; index++) {
@@ -258,7 +258,7 @@ export default {
         },
         getProfile: async function () {
             if (!this.userAddress) return
-            this.axios.get(`https://darshprotocol.onrender.com/users/${this.userAddress.toLowerCase()}`).then(response => {
+            this.axios.get(`https://loanvista.onrender.com/users/${this.userAddress.toLowerCase()}`).then(response => {
                 this.user = response.data;
             }).catch(error => {
                 console.error(error);
@@ -266,7 +266,7 @@ export default {
         },
         getTransfers: function() {
             if (!this.userAddress) return
-            this.axios.get(`https://darshprotocol.onrender.com/transfers?from=${this.userAddress.toLowerCase()}`).then(response => {
+            this.axios.get(`https://loanvista.onrender.com/transfers?from=${this.userAddress.toLowerCase()}`).then(response => {
                 this.transfers = response.data;
             }).catch(error => {
                 console.error(error);

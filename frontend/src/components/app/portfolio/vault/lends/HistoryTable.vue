@@ -68,7 +68,7 @@
                             </div>
                         </td>
                         <td>
-                            <a target="_blank" :href="`https://testnet.ftmscan.com/tx/${transfer.hash}`">
+                            <a target="_blank" :href="`https://baobab.klaytnscope.com/tx/${transfer.hash}`">
                                 <div class="link">
                                     <p>View Txn</p>
                                     <IconOut />

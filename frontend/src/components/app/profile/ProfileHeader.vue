@@ -129,7 +129,7 @@ export default {
             if (this.userAddress == null) {
                 return;
             }
-            this.axios.get(`https://darshprotocol.onrender.com/users/${this.userAddress}`).then(response => {
+            this.axios.get(`https://loanvista.onrender.com/users/${this.userAddress}`).then(response => {
                 this.user = response.data;
                 this.fetching = false;
             }).catch(error => {

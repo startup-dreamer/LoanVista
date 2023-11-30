@@ -1,21 +1,21 @@
 import convert from './BaseConverter.js'
 
 const Converter = {
-    fromWei: function (wei) {
+    fromPeb: function (peb) {
         try {
-            if (wei == '' || wei == 0) return '0'
-            return convert(wei, 'wei', 'ether')
+            if (peb == '' || peb == 0) return '0'
+            return convert(peb, 'peb', 'KLAY')
         } catch (error) {
-            console.error('ether', error);
+            console.error('KLAY', error);
             return '0'
         }
     },
-    toWei: function (ether) {
+    toPeb: function (klay) {
         try {
-            if (ether == '') return '0'
-            return convert(ether, 'ether', 'wei')
+            if (klay == '') return '0'
+            return convert(klay, 'KLAY', 'peb')
         } catch (error) {
-            console.error('wei', error);
+            console.error('peb', error);
             return '0'
         }
     },

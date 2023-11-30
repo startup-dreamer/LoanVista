@@ -82,14 +82,14 @@ export default {
             }
         },
         markAsRead: async function (id) {
-            this.axios.post(`https://darshprotocol.onrender.com/notifications/mark/${id}`).then(() => {
+            this.axios.post(`https://loanvista.onrender.com/notifications/mark/${id}`).then(() => {
                 this.getNotifications()
             }).catch(error => {
                 console.error(error);
             })
         },
         markAllAsRead: async function () {
-            this.axios.post(`https://darshprotocol.onrender.com/notifications/markall?to=${this.userAddress.toLowerCase()}`).then(() => {
+            this.axios.post(`https://loanvista.onrender.com/notifications/markall?to=${this.userAddress.toLowerCase()}`).then(() => {
                 this.getNotifications()
             }).catch(error => {
                 console.error(error);
@@ -108,7 +108,7 @@ export default {
         getNotifications: function () {
             if (!this.userAddress) return
             this.fetching = true
-            this.axios.get(`https://darshprotocol.onrender.com/notifications?to=${this.userAddress.toLowerCase()}`).then(response => {
+            this.axios.get(`https://loanvista.onrender.com/notifications?to=${this.userAddress.toLowerCase()}`).then(response => {
                 this.notifications = response.data
                 this.fetching = false
             }).catch(error => {

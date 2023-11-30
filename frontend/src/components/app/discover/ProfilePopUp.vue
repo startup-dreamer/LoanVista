@@ -158,7 +158,7 @@ export default {
             if (this.address == null) {
                 return;
             }
-            this.axios.get(`https://darshprotocol.onrender.com/users/${this.address}`).then(response => {
+            this.axios.get(`https://loaonvista.onrender.com/users/${this.address}`).then(response => {
                 this.user = response.data;
                 this.fetching = false;
             }).catch(error => {

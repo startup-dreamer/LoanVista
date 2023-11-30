@@ -81,7 +81,7 @@ export default {
         checkNotification: function (userAddress) {
             if (!userAddress)
                 return;
-            this.axios.get(`https://darshprotocol.onrender.com/notifications?to=${userAddress.toLowerCase()}&readAt=0`).then(response => {
+            this.axios.get(`https://loanvista.onrender.com/notifications?to=${userAddress.toLowerCase()}&readAt=0`).then(response => {
                 this.unReadNotifications = response.data;
             }).catch(error => {
                 console.error(error);

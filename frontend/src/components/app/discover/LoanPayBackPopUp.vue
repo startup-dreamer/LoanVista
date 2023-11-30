@@ -95,7 +95,7 @@ export default {
                     description: 'Payback successfully created.',
                     type: 'success',
                     linkTitle: 'View Trx',
-                    linkUrl: `https://testnet.ftmscan.com/tx/${trx.tx}`
+                    linkUrl: `https://baobab.klaytnscope.com/tx/${trx.tx}`
                 })
             } else {
                 messages.insertMessage({
