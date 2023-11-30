@@ -24,16 +24,7 @@ import "@openzeppelin/contracts/utils/math/SafeMath.sol";
 
 /**
  * @title LendingPool contract
- * @dev Main point of interaction with the DARSH protocol's market
- * - Users can:
- *   # Create Lending/Borrowing offers
- *   # Request for new terms on offers
- *   # Repay (Fully/Installment)
- *   # Claim principal and earnings
- *   # Claim back collateral
- *   # Cancel/Reject/Accept requests
- * - All admin functions are callable by the deployer address
- * @author Arogundade Ibrahim
+ * @dev Main point of interaction with the LoanVista market
  **/
 contract LendingPool is
     LendingPoolProvider,
@@ -56,7 +47,7 @@ contract LendingPool is
     IOfferManager private _offerManager;
     IFeeManager private _feeManager;
 
-    /// @dev for convienency this address is used to represent FTM just like ERC20
+    /// @dev for convienency this address is used to represent Klay just like ERC20
     address public constant nativeAddress =
         0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE;
 

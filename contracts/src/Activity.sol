@@ -8,7 +8,6 @@ import "./interfaces/IActivity.sol";
 import "@openzeppelin/contracts/access/Ownable2Step.sol";
 
 /// @title Activity contract
-/// @author Arogundade Ibrahim
 /// @notice Keeps record of every user's activity on the LendingPool contract
 /// @dev These records are use to calculate user's darsh score
 contract Activity is Ownable2Step, IActivity {

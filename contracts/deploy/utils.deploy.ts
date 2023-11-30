@@ -30,9 +30,9 @@ async function main() {
 main()
   .then(() => process.exit(0))
   .catch((error) => {
-  console.error(error);
-  process.exit(1);
-});
+    console.error(error);
+    process.exit(1);
+  });
 
 // Activity deployed to: 0xBa86c386b9625E8d928207E478a6DDc6A3B10799
 // PriceFeed deployed to: 0xdEcc3098eAAe386AB455C4b0b7bCE8513fB663d3

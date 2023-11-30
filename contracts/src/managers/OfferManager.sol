@@ -10,16 +10,6 @@ import "@openzeppelin/contracts/utils/math/SafeMath.sol";
 import "@openzeppelin/contracts/access/Ownable2Step.sol";
 import "@openzeppelin/contracts/utils/Counters.sol";
 
-/*
-    The OfferManager contract is responsible for bookeeping
-    the offers and requests made.
-
-    It can be only modified by the LendingPool contract,
-    but can be read from external sources.
-
-    Any OfferManager contract must inherite the IOfferManager interface.
-*/
-
 contract OfferManager is IOfferManager, Ownable2Step {
     uint256 public constant ONE_DAY = 60 * 60 * 24;
     uint256 public constant ONE_HOUR = 60 * 60;
